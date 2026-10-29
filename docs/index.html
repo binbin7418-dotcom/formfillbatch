@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FormFillBatch — Fill PDF Forms from a Spreadsheet, Verified</title>
+<meta name="description" content="Fill a fillable PDF form once per spreadsheet row: one flattened PDF per row, every output re-opened and read back. $29 one-time, fully offline.">
+<style>
+  body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;color:#1c2530;background:#f7f9fb;line-height:1.6}
+  .wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+  h1{font-size:2rem;line-height:1.2;margin:.2em 0}
+  h2{margin-top:1.6em}
+  .sub{font-size:1.15rem;color:#43536a}
+  .cta{display:inline-block;background:#0f7b4d;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-weight:600;margin:18px 0}
+  .card{background:#fff;border:1px solid #dde4ec;border-radius:10px;padding:18px 22px;margin:16px 0}
+  code{background:#eef2f6;padding:1px 6px;border-radius:4px}
+  ul{padding-left:1.2em}
+  .fine{color:#5a6a7f;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="fine">FORMFILLBATCH · WINDOWS · ONE-TIME $29 · FULLY OFFLINE</p>
+  <h1>The same form, filled 200 times. By hand. Until now.</h1>
+  <p class="sub">FormFillBatch fills your fillable PDF form once per spreadsheet row — vendor packets, intake forms, applications — and writes one flattened PDF per row, named from a column you choose. Then it re-opens every output and reads the values back to prove they landed. No uploads, no per-document fees.</p>
+  <a class="cta" href="https://binbinster.gumroad.com/l/formfillbatch-fill-pdf-forms-from-spreadsheet">Get FormFillBatch on Gumroad — $29</a>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ul>
+      <li>Template: any fillable (AcroForm) PDF — the built-in field lister shows the exact field names to use as column headers</li>
+      <li>Data: CSV or Excel; columns map to fields by name</li>
+      <li>Text fields and checkboxes filled; outputs named like <code>001_Alice_Nguyen.pdf</code></li>
+      <li>Flattened properly: values baked into the page content, so they print and archive identically everywhere</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>The read-back (why this exists)</h2>
+    <p>Every produced PDF is re-opened and every value compared against the spreadsheet row it came from. A row that fails is named in the report — the batch only passes when every row verifies. Columns with no matching field, and fields with no column, are both listed in the open. Nothing is silently dropped.</p>
+  </div>
+
+  <h2>Measured, not promised</h2>
+  <p>Seeded acceptance test: 12/12 checks passed — a 3-field form × a 3-row CSV produced 3 fully flattened PDFs with every value readable on read-back, and the deliberately unmatched column correctly reported.</p>
+
+  <h2>Honest limits</h2>
+  <ul>
+    <li>AcroForm forms only; a form with no fillable fields is rejected with a clear explanation</li>
+    <li>XFA forms (some government PDFs) are detected and flagged unsupported, never half-filled</li>
+    <li>Checkbox states are set from the form's own export values; spot-check one output if they are critical</li>
+  </ul>
+
+  <a class="cta" href="https://binbinster.gumroad.com/l/formfillbatch-fill-pdf-forms-from-spreadsheet">Fill the batch — $29 once</a>
+  <p class="fine">Windows desktop app. Sample template + sample CSV included so you can see the mapping work first.</p>
+</div>
+</body>
+</html>
